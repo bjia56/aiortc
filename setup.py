@@ -14,18 +14,18 @@ with open(readme_file, encoding="utf-8") as f:
     long_description = f.read()
 
 cffi_modules = [
-    "src/_cffi_src/build_opus.py:ffibuilder",
-    "src/_cffi_src/build_vpx.py:ffibuilder",
+#    "src/_cffi_src/build_opus.py:ffibuilder",
+#    "src/_cffi_src/build_vpx.py:ffibuilder",
 ]
 install_requires = [
     "aioice>=0.7.5,<0.8.0",
-    "av>=9.0.0,<10.0.0",
-    "cffi>=1.0.0",
+#    "av>=9.0.0,<10.0.0",
+#    "cffi>=1.0.0",
     "cryptography>=2.2",
     'dataclasses; python_version < "3.7"',
     "google-crc32c>=1.1",
     "pyee>=9.0.0",
-    "pylibsrtp>=0.5.6",
+#    "pylibsrtp>=0.5.6",
 ]
 
 extras_require = {
@@ -64,8 +64,8 @@ setuptools.setup(
     ],
     cffi_modules=cffi_modules,
     package_dir={"": "src"},
-    packages=["aiortc", "aiortc.codecs", "aiortc.contrib"],
-    setup_requires=["cffi>=1.0.0"],
+    packages=["aiortc"],#, "aiortc.codecs", "aiortc.contrib"],
+    setup_requires=[],#"cffi>=1.0.0"],
     install_requires=install_requires,
     extras_require=extras_require,
 )
